@@ -27,7 +27,7 @@ public class GameEngine {
 
     public void loginUser(String userName) {
         User user = new User(userName);
-        mappingOfUsernamesToUsers.put(userName, user);
+        this.mappingOfUsernamesToUsers.put(userName, user);
     }
 
     public void addUserToRoom(User user, String roomName) {

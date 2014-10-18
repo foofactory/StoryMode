@@ -23,7 +23,6 @@ public class Tester {
         assertEquals(foundUser, user);
         assertEquals(foundUser.getCurrentRoom(), gameEngine.currentRooms.get(0));
         assertEquals(foundUser.getScore(), 1);
-       // assertEquals(userName, foundUser.getUserName());
-        System.out.println(foundUser.getUserName());
+        assertEquals(userName, foundUser.getUserName());
     }
 }

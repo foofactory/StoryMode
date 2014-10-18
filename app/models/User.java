@@ -13,7 +13,7 @@ public class User {
     private String chatMessage = "";
     private boolean hasSubmitted = false;
 
-    public User(String username) {
+    public User(String userName) {
         this.userName = userName;
     }
 
