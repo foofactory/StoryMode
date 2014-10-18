@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(views.html.index.render("Hello Play Framework"));
+        return ok(views.html.index.render("#eishackathon"));
     }
 
     public static Result feedback(String name) { return ok(views.html.index.render(name)); }
