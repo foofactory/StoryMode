@@ -1,6 +1,6 @@
 // @SOURCE:/Users/eis/Development/Java/StoryMode/conf/routes
-// @HASH:d9aa5fce1d3b586e281ab1fe18252d851b8dc6e2
-// @DATE:Sat Oct 18 11:07:28 EDT 2014
+// @HASH:387d6b07efd96656acd3679ebb98828a1a2612bc
+// @DATE:Sat Oct 18 12:55:20 EDT 2014
 
 package controllers;
 

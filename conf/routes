@@ -4,6 +4,8 @@
 
 GET        /                              controllers.Application.index()
 
+GET        /test/:foo                     controllers.Application.feedback(foo)
+
 GET        /sync-foo                      controllers.Application.syncFoo()
 GET        /async-foo                     controllers.Application.asyncFoo()
 GET        /async-non-blocking-foo        controllers.Application.asyncNonBlockingFoo()

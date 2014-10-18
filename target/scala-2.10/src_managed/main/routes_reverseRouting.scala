@@ -1,6 +1,6 @@
 // @SOURCE:/Users/eis/Development/Java/StoryMode/conf/routes
-// @HASH:d9aa5fce1d3b586e281ab1fe18252d851b8dc6e2
-// @DATE:Sat Oct 18 11:07:28 EDT 2014
+// @HASH:387d6b07efd96656acd3679ebb98828a1a2612bc
+// @DATE:Sat Oct 18 12:55:20 EDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,23 +13,24 @@ import play.libs.F
 import Router.queryString
 
 
-// @LINE:21
-// @LINE:20
-// @LINE:17
-// @LINE:14
+// @LINE:23
+// @LINE:22
+// @LINE:19
+// @LINE:16
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
-// @LINE:8
 // @LINE:7
 // @LINE:5
 package controllers {
 
-// @LINE:21
+// @LINE:23
 class ReverseWebJarAssets {
     
 
-// @LINE:21
+// @LINE:23
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "webjars/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -38,11 +39,11 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:20
+// @LINE:22
 class ReverseAssets {
     
 
-// @LINE:20
+// @LINE:22
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -51,48 +52,49 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:17
-// @LINE:14
+// @LINE:19
+// @LINE:16
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
-// @LINE:8
 // @LINE:7
 // @LINE:5
 class ReverseApplication {
     
 
-// @LINE:10
+// @LINE:12
 def reactiveRequest(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "reactive-request")
 }
                                                 
 
-// @LINE:11
+// @LINE:13
 def reactiveComposition(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "reactive-composition")
 }
                                                 
 
-// @LINE:9
+// @LINE:11
 def asyncNonBlockingFoo(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "async-non-blocking-foo")
 }
                                                 
 
-// @LINE:8
+// @LINE:10
 def asyncFoo(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "async-foo")
 }
                                                 
 
-// @LINE:14
+// @LINE:16
 def events(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "events")
 }
                                                 
 
-// @LINE:7
+// @LINE:9
 def syncFoo(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "sync-foo")
 }
@@ -104,7 +106,13 @@ def index(): Call = {
 }
                                                 
 
-// @LINE:17
+// @LINE:7
+def feedback(foo:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "test/" + implicitly[PathBindable[String]].unbind("foo", dynamicString(foo)))
+}
+                                                
+
+// @LINE:19
 def echo(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "echo")
 }
@@ -116,23 +124,24 @@ def echo(): Call = {
                   
 
 
-// @LINE:21
-// @LINE:20
-// @LINE:17
-// @LINE:14
+// @LINE:23
+// @LINE:22
+// @LINE:19
+// @LINE:16
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
-// @LINE:8
 // @LINE:7
 // @LINE:5
 package controllers.javascript {
 
-// @LINE:21
+// @LINE:23
 class ReverseWebJarAssets {
     
 
-// @LINE:21
+// @LINE:23
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.WebJarAssets.at",
    """
@@ -146,11 +155,11 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:20
+// @LINE:22
 class ReverseAssets {
     
 
-// @LINE:20
+// @LINE:22
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -164,18 +173,19 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:17
-// @LINE:14
+// @LINE:19
+// @LINE:16
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
-// @LINE:8
 // @LINE:7
 // @LINE:5
 class ReverseApplication {
     
 
-// @LINE:10
+// @LINE:12
 def reactiveRequest : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.reactiveRequest",
    """
@@ -186,7 +196,7 @@ def reactiveRequest : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:11
+// @LINE:13
 def reactiveComposition : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.reactiveComposition",
    """
@@ -197,7 +207,7 @@ def reactiveComposition : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:9
+// @LINE:11
 def asyncNonBlockingFoo : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.asyncNonBlockingFoo",
    """
@@ -208,7 +218,7 @@ def asyncNonBlockingFoo : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:8
+// @LINE:10
 def asyncFoo : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.asyncFoo",
    """
@@ -219,7 +229,7 @@ def asyncFoo : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:14
+// @LINE:16
 def events : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.events",
    """
@@ -230,7 +240,7 @@ def events : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:7
+// @LINE:9
 def syncFoo : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.syncFoo",
    """
@@ -252,7 +262,18 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:17
+// @LINE:7
+def feedback : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.feedback",
+   """
+      function(foo) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("foo", encodeURIComponent(foo))})
+      }
+   """
+)
+                        
+
+// @LINE:19
 def echo : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.echo",
    """
@@ -269,24 +290,25 @@ def echo : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:21
-// @LINE:20
-// @LINE:17
-// @LINE:14
+// @LINE:23
+// @LINE:22
+// @LINE:19
+// @LINE:16
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
-// @LINE:8
 // @LINE:7
 // @LINE:5
 package controllers.ref {
 
 
-// @LINE:21
+// @LINE:23
 class ReverseWebJarAssets {
     
 
-// @LINE:21
+// @LINE:23
 def at(file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.WebJarAssets.at(file), HandlerDef(this, "controllers.WebJarAssets", "at", Seq(classOf[String]), "GET", """""", _prefix + """webjars/$file<.+>""")
 )
@@ -295,11 +317,11 @@ def at(file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:20
+// @LINE:22
 class ReverseAssets {
     
 
-// @LINE:20
+// @LINE:22
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -308,48 +330,49 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:17
-// @LINE:14
+// @LINE:19
+// @LINE:16
+// @LINE:13
+// @LINE:12
 // @LINE:11
 // @LINE:10
 // @LINE:9
-// @LINE:8
 // @LINE:7
 // @LINE:5
 class ReverseApplication {
     
 
-// @LINE:10
+// @LINE:12
 def reactiveRequest(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.reactiveRequest(), HandlerDef(this, "controllers.Application", "reactiveRequest", Seq(), "GET", """""", _prefix + """reactive-request""")
 )
                       
 
-// @LINE:11
+// @LINE:13
 def reactiveComposition(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.reactiveComposition(), HandlerDef(this, "controllers.Application", "reactiveComposition", Seq(), "GET", """""", _prefix + """reactive-composition""")
 )
                       
 
-// @LINE:9
+// @LINE:11
 def asyncNonBlockingFoo(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.asyncNonBlockingFoo(), HandlerDef(this, "controllers.Application", "asyncNonBlockingFoo", Seq(), "GET", """""", _prefix + """async-non-blocking-foo""")
 )
                       
 
-// @LINE:8
+// @LINE:10
 def asyncFoo(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.asyncFoo(), HandlerDef(this, "controllers.Application", "asyncFoo", Seq(), "GET", """""", _prefix + """async-foo""")
 )
                       
 
-// @LINE:14
+// @LINE:16
 def events(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.events(), HandlerDef(this, "controllers.Application", "events", Seq(), "GET", """ Server Sent Events""", _prefix + """events""")
 )
                       
 
-// @LINE:7
+// @LINE:9
 def syncFoo(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.syncFoo(), HandlerDef(this, "controllers.Application", "syncFoo", Seq(), "GET", """""", _prefix + """sync-foo""")
 )
@@ -361,7 +384,13 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:17
+// @LINE:7
+def feedback(foo:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.feedback(foo), HandlerDef(this, "controllers.Application", "feedback", Seq(classOf[String]), "GET", """""", _prefix + """test/$foo<[^/]+>""")
+)
+                      
+
+// @LINE:19
 def echo(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.echo(), HandlerDef(this, "controllers.Application", "echo", Seq(), "GET", """ WebSocket""", _prefix + """echo""")
 )

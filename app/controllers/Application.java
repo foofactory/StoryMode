@@ -15,6 +15,8 @@ public class Application extends Controller {
         return ok(views.html.index.render("Hello Play Framework"));
     }
 
+    public static Result feedback(String name) { return ok(views.html.index.render(name)); }
+
     public static Result syncFoo() {
         return ok("sync foo");
     }
