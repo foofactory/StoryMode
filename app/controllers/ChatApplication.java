@@ -51,7 +51,7 @@ public class ChatApplication extends Controller {
    */
   public static Result chatFeed(String room) {
     String remoteAddress = request().remoteAddress();
-    Logger.info(remoteAddress + " - SSE conntected");
+    Logger.info(remoteAddress + " - StoryMode Connected");
 
     return ok(new EventSource() {
       @Override
@@ -59,7 +59,7 @@ public class ChatApplication extends Controller {
         EventSource currentSocket = this;
 
         this.onDisconnected(() -> {
-          Logger.info(remoteAddress + " - SSE disconntected");
+          Logger.info(remoteAddress + " - StoryMode Disconnected");
           socketsPerRoom.compute(room, (key, value) -> {
             if(value.contains(currentSocket))
               value.remove(currentSocket);
