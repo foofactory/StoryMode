@@ -7,8 +7,8 @@ import java.util.HashMap;
  * Created by Nova on 10/18/2014.
  */
 public class GameEngine {
-    ArrayList<Room> currentRooms;
-    HashMap<String, User> mappingOfUsernamesToUsers;
+    public ArrayList<Room> currentRooms;
+    public HashMap<String, User> mappingOfUsernamesToUsers;
 
     public GameEngine() {
         currentRooms = new ArrayList<Room>();
@@ -25,7 +25,7 @@ public class GameEngine {
         currentRooms.add(room);
     }
 
-    public void createNewUser(String userName) {
+    public void loginUser(String userName) {
         User user = new User(userName);
         mappingOfUsernamesToUsers.put(userName, user);
     }

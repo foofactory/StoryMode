@@ -19,7 +19,7 @@ public class Room {
      * @param pointsNeededToWin The points that are needed to win a game
      */
     public Room(int pointsNeededToWin, String roomName) {
-        this.mappingOfUsernamesToUsers = mappingOfUsernamesToUsers;
+        mappingOfUsernamesToUsers = new HashMap<String, User>();
         story = "";
         this.pointsNeededToWin = pointsNeededToWin;
         this.roomName = roomName;

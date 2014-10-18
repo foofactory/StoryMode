@@ -35,8 +35,8 @@
     <orderEntry type="library" name="SBT: org.webjars:webjars-play_2.10:2.2.0" level="project" />
     <orderEntry type="library" name="SBT: org.webjars:requirejs:2.1.8" level="project" />
     <orderEntry type="library" name="SBT: org.webjars:webjars-locator:0.5" level="project" />
-    <orderEntry type="library" name="SBT: org.webjars:bootstrap:2.3.1" level="project" />
-    <orderEntry type="library" name="SBT: org.webjars:jquery:1.9.0" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:bootstrap:3.2.0" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:jquery:1.11.1" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe.play:play_2.10:2.2.2" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe.play:sbt-link:2.2.2" level="project" />
     <orderEntry type="library" name="SBT: org.javassist:javassist:3.18.0-GA" level="project" />
@@ -138,15 +138,6 @@
     <orderEntry type="library" scope="TEST" name="SBT: org.seleniumhq.selenium:selenium-support:2.32.0:test" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: org.easytesting:fest-assert:1.4:test" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: org.easytesting:fest-util:1.1.6:test" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
   </component>
 </module>
 
