@@ -29,8 +29,8 @@ object index extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,
 Seq[Any](format.raw/*1.19*/("""
 
 """),_display_(Seq[Any](/*3.2*/main("Welcome to Play Framework")/*3.35*/ {_display_(Seq[Any](format.raw/*3.37*/("""
-    
-    <script src=""""),_display_(Seq[Any](/*5.19*/routes/*5.25*/.Assets.at("javascripts/index.js"))),format.raw/*5.59*/(""""></script>
+
+<script src=""""),_display_(Seq[Any](/*5.15*/routes/*5.21*/.Assets.at("javascripts/index.js"))),format.raw/*5.55*/(""""></script>
 
     <div class="well">
         <h1>"""),_display_(Seq[Any](/*8.14*/message)),format.raw/*8.21*/("""</h1>
@@ -65,10 +65,10 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Sat Oct 18 11:07:30 EDT 2014
+                    DATE: Sat Oct 18 12:18:21 EDT 2014
                     SOURCE: /Users/eis/Development/Java/StoryMode/app/views/index.scala.html
-                    HASH: ca119f1799dd27082b3a2b20a3bea9f1c5910c21
-                    MATRIX: 774->1|885->18|922->21|963->54|1002->56|1061->80|1075->86|1130->120|1214->169|1242->176|1342->240|1357->246|1401->268|1479->310|1494->316|1539->339|1618->382|1633->388|1689->422|1781->478|1796->484|1848->514|1934->564|1949->570|2005->604|2251->819
+                    HASH: 69ec1c7ad6cf4f6a7bb18b56a4b7a078cd24fc46
+                    MATRIX: 774->1|885->18|922->21|963->54|1002->56|1053->72|1067->78|1122->112|1206->161|1234->168|1334->232|1349->238|1393->260|1471->302|1486->308|1531->331|1610->374|1625->380|1681->414|1773->470|1788->476|1840->506|1926->556|1941->562|1997->596|2243->811
                     LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|33->5|36->8|36->8|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|55->27
                     -- GENERATED --
                 */
