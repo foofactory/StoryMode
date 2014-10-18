@@ -11,6 +11,10 @@ import java.util.concurrent.TimeUnit;
 
 public class Application extends Controller {
 
+    public static WebSocket<String> socket() {
+        return WebSocket.withActor(MyWebSocketActor::props);
+    }
+
     public static Result index() {
         return ok(views.html.index.render("#eishackathon"));
     }
