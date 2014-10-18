@@ -1,26 +1,29 @@
 @(message: String)
 
-@main("Welcome to Play Framework") {
+@main("StoryMode") {
 
 <script src="@routes.Assets.at("javascripts/index.js")"></script>
 
     <div class="well">
         <h1>@message</h1>
     </div>
-    
-    Demos:
-    <ul>
-        <li><a href="@routes.Application.syncFoo()">Sync Foo</a></li>
-        <li><a href="@routes.Application.asyncFoo()">Async Foo</a></li>
-        <li><a href="@routes.Application.asyncNonBlockingFoo()">Async Non-Blocking Foo</a></li>
-        <li><a href="@routes.Application.reactiveRequest()">Reactive Request</a></li>
-        <li><a href="@routes.Application.reactiveComposition()">Reactive Composition</a></li>
-    </ul>
-    
-    <button id="sse-demo">Connect to Server Sent Event Channel</button>
-    
-    <br/><br/>
-    
-    <button id="websocket-demo">Send WebSocket Message</button>
 
+    <br/><br/>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" class="form-control">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+
+    <br/><br/>
+
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe width="560" height="315" src="//www.youtube.com/embed/-c6vKoaqWvU" frameborder="0" allowfullscreen></iframe>
+    </div>
 }
