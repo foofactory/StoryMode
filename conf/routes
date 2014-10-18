@@ -2,22 +2,9 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET        /                              controllers.Application.index()
-
-GET        /test/:foo                     controllers.Application.feedback(foo)
-
-GET        /sync-foo                      controllers.Application.syncFoo()
-GET        /async-foo                     controllers.Application.asyncFoo()
-GET        /async-non-blocking-foo        controllers.Application.asyncNonBlockingFoo()
-GET        /reactive-request              controllers.Application.reactiveRequest()
-GET        /reactive-composition          controllers.Application.reactiveComposition()
-
-# Server Sent Events
-GET        /events                        controllers.Application.events()
-
-# WebSocket
-GET        /echo                          controllers.Application.echo()
+GET         /                      controllers.ChatApplication.index
+GET         /chatFeed/:room        controllers.ChatApplication.chatFeed(room: String)
+POST        /chat                  controllers.ChatApplication.postMessage
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file                  controllers.Assets.at(path="/public", file)
-GET        /webjars/*file                 controllers.WebJarAssets.at(file)
+GET         /assets/*file          controllers.Assets.at(path="/public", file)
