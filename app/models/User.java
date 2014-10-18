@@ -102,4 +102,8 @@ public class User {
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
     }
+
+    public void joinRoom() {
+        currentRoom.addUser(this);
+    }
 }

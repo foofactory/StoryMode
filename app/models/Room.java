@@ -18,10 +18,9 @@ public class Room {
      * @param pointsNeededToWin The points that are needed to win a game
      */
     public Room(int pointsNeededToWin) {
-        mappingOfUsernamesToUsers = new HashMap<String, User>();
+        this.mappingOfUsernamesToUsers = mappingOfUsernamesToUsers;
         story = "";
         this.pointsNeededToWin = pointsNeededToWin;
-        usersOrderedByTurnOrder = new ArrayList<User>();
     }
 
     /**
