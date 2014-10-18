@@ -55,7 +55,7 @@ public class User {
     }
 
     /**
-     * Incrememnts the score for this user, by 1 point
+     * Increments the score for this user, by 1 point
      */
     public void addPointToScore() {
         score++;
