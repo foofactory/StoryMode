@@ -138,6 +138,15 @@
     <orderEntry type="library" scope="TEST" name="SBT: org.seleniumhq.selenium:selenium-support:2.32.0:test" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: org.easytesting:fest-assert:1.4:test" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: org.easytesting:fest-util:1.1.6:test" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 
