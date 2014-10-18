@@ -7,6 +7,7 @@ version := "1.0-SNAPSHOT"
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
 libraryDependencies ++= Seq(
+  "org.webjars" % "bootswatch-spacelab" % "3.2.0-1",
   "org.webjars" %% "webjars-play" % "2.2.0",
   "org.webjars" % "bootstrap" % "2.3.1")
 
