@@ -11,6 +11,11 @@ public class User {
     private boolean isChooser = false;
     private Room currentRoom;
     private String chatMessage = "";
+    private boolean hasSubmitted = false;
+
+    public User(String username) {
+        this.userName = userName;
+    }
 
     public void sendChatMessage(String message) {
         chatMessage = message;
@@ -33,6 +38,7 @@ public class User {
      */
     public void submitPhrase(String phrase) {
         lastPhraseSubmitted = phrase;
+        hasSubmitted = true;
         //TODO
     }
 
@@ -44,7 +50,7 @@ public class User {
     public void choosePhrase(String phrase) {
         if (isChooser) {
             chosenPhrase = phrase;
-            //TODO push this event to all users in the
+            //TODO push this event to all users in the room this user is in
         }
     }
 
@@ -103,7 +109,7 @@ public class User {
         this.currentRoom = currentRoom;
     }
 
-    public void joinRoom() {
-        currentRoom.addUser(this);
+    public void joinRoom(Room room) {
+        room.addUser(this);
     }
 }

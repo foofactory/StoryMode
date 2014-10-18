@@ -9,18 +9,20 @@ import java.util.HashMap;
  */
 public class Room {
 
-    HashMap<String, User> mappingOfUsernamesToUsers;
-    String story;
-    int pointsNeededToWin = 0;
-    ArrayList<User> usersOrderedByTurnOrder;
+    private HashMap<String, User> mappingOfUsernamesToUsers;
+    private String story;
+    private int pointsNeededToWin = 0;
+    private ArrayList<User> usersOrderedByTurnOrder;
+    private String roomName = "";
 
     /**
      * @param pointsNeededToWin The points that are needed to win a game
      */
-    public Room(int pointsNeededToWin) {
+    public Room(int pointsNeededToWin, String roomName) {
         this.mappingOfUsernamesToUsers = mappingOfUsernamesToUsers;
         story = "";
         this.pointsNeededToWin = pointsNeededToWin;
+        this.roomName = roomName;
     }
 
     /**
@@ -49,4 +51,43 @@ public class Room {
         return mappingOfUsernamesToUsers.get(username);
     }
 
+    public HashMap<String, User> getMappingOfUsernamesToUsers() {
+        return mappingOfUsernamesToUsers;
+    }
+
+    public void setMappingOfUsernamesToUsers(HashMap<String, User> mappingOfUsernamesToUsers) {
+        this.mappingOfUsernamesToUsers = mappingOfUsernamesToUsers;
+    }
+
+    public String getStory() {
+        return story;
+    }
+
+    public void setStory(String story) {
+        this.story = story;
+    }
+
+    public int getPointsNeededToWin() {
+        return pointsNeededToWin;
+    }
+
+    public void setPointsNeededToWin(int pointsNeededToWin) {
+        this.pointsNeededToWin = pointsNeededToWin;
+    }
+
+    public ArrayList<User> getUsersOrderedByTurnOrder() {
+        return usersOrderedByTurnOrder;
+    }
+
+    public void setUsersOrderedByTurnOrder(ArrayList<User> usersOrderedByTurnOrder) {
+        this.usersOrderedByTurnOrder = usersOrderedByTurnOrder;
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
+
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
+    }
 }

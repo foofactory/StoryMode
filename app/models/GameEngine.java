@@ -15,8 +15,28 @@ public class GameEngine {
         mappingOfUsernamesToUsers = new HashMap<String, User>();
     }
 
-    public void addRoom(int pointsNeededToWin) {
-        Room room = new Room(pointsNeededToWin);
+    /**
+     * Creates a room object and loads it into the list of currently available rooms
+     *
+     * @param pointsNeededToWin The amount of points needed to win the game for the room that will be created
+     */
+    public void addRoom(int pointsNeededToWin, String roomName) {
+        Room room = new Room(pointsNeededToWin, roomName);
         currentRooms.add(room);
     }
+
+    public void createNewUser(String userName) {
+        User user = new User(userName);
+        mappingOfUsernamesToUsers.put(userName, user);
+    }
+
+    public void addUserToRoom(User user, String roomName) {
+        for (Room room : currentRooms) {
+            if (room.getRoomName().equals(roomName)) {
+                user.joinRoom(room);
+                return;
+            }
+        }
+    }
+
 }
