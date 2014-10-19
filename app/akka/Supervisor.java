@@ -9,22 +9,22 @@ import java.util.concurrent.TimeUnit;
  */
 public class Supervisor extends UntypedActor {
 
-  private final ActorRef juliet;
-  private final ActorRef romeo;
+  private final ActorRef robin;
+  private final ActorRef batman;
 
   public Supervisor() {
-    this.juliet = context().actorOf(Props.create(Chatter.class, () -> new Chatter("Juliet", Quotes.juliet)));
+    this.robin = context().actorOf(Props.create(Chatter.class, () -> new Chatter("Robin", Quotes.robin)));
     context().system().scheduler().schedule(
       Duration.apply(1, TimeUnit.SECONDS),
       Duration.apply(8, TimeUnit.SECONDS),
-      juliet, ChatActors.TALK,
+      robin, ChatActors.TALK,
       getContext().dispatcher(), self());
 
-    this.romeo = context().actorOf(Props.create(Chatter.class, () -> new Chatter("Romeo", Quotes.romeo)));
+    this.batman = context().actorOf(Props.create(Chatter.class, () -> new Chatter("Batman", Quotes.batman)));
     context().system().scheduler().schedule(
       Duration.apply(1, TimeUnit.SECONDS),
       Duration.apply(8, TimeUnit.SECONDS),
-      romeo, ChatActors.TALK,
+      batman, ChatActors.TALK,
       getContext().dispatcher(), self());
   }
 

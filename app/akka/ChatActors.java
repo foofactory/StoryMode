@@ -7,7 +7,7 @@ public class ChatActors {
   /** SSE-Chat actor system */
   private static ActorSystem system = null;
 
-  /** Supervisor for Romeo and Juliet */
+  /** Supervisor for Batman and Robin */
   private static ActorRef supervisor = null;
 
   public static void start() {

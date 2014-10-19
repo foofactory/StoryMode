@@ -1,6 +1,31 @@
-body {
+html, body {
+  position: relative;
   font-family: helvetica;
+  height: 100%;
   background: #CCC;
+}
+
+.col-lg-12 {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.slidedown .glyphicon, .chat .glyphicon {
+  height: 100%;
+}
+
+.panel {
+  min-height: 100%;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.panel-body {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow-y: scroll;
 }
 
 #chat {
@@ -45,16 +70,13 @@ body {
 
 .msg {
   padding: 10px;
-  width: 400px;
-  background: #FF9966;
+  width: 100%;
 }
 
 .others {
-  background: #99D8FF;
 }
 
 .juliet {
-  background: #FF69B4;
 }
 
 .undo {
@@ -83,15 +105,6 @@ body {
 
 .chat li .chat-body p {
   margin: 0;
-}
-
-.panel .slidedown .glyphicon, .chat .glyphicon {
-  margin-right: 5px;
-}
-
-.panel-body {
-  overflow-y: scroll;
-  height: 250px;
 }
 
 ::-webkit-scrollbar-track {

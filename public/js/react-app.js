@@ -58,7 +58,7 @@
     });
 
     /** randomly generate initial user name */
-    var initialName = function () { return "Jane Doe #" + Math.floor((Math.random()*100)+1) };
+    var initialName = function () { return "Batman" };
 
     /** ChatApp is the main component in this application, it holds all state, which is passed down to child components
      *  only as immutable props */

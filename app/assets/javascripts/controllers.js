@@ -6,7 +6,7 @@ angular.module('sseChat.controllers', ['sseChat.services']).
         $scope.rooms = chatModel.getRooms();
         $scope.msgs = [];
         $scope.inputText = "";
-        $scope.user = "Jane Doe #" + Math.floor((Math.random() * 100) + 1);
+        $scope.user = "Joker";
         $scope.currentRoom = $scope.rooms[0];
 
         /** change current room, restart EventSource connection */

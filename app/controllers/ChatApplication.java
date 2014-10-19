@@ -34,6 +34,7 @@ public class ChatApplication extends Controller {
    * Send event to all channels (browsers) which are connected to the room
    */
   public static void sendEvent(JsonNode msg) {
+    System.out.println(msg);
     String room  = msg.findPath("room").textValue();
     if(socketsPerRoom.containsKey(room)) {
       socketsPerRoom.get(room).stream().forEach(es -> es.send(EventSource.Event.event(msg)));
