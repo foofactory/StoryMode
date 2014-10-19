@@ -19,7 +19,7 @@ public class ChatApplication extends Controller {
    * Controller action serving AngularJS chat page
    */
   public static Result index() {
-    return ok(views.html.index.render("Chat using Server Sent Events and AngularJS"));
+    return ok(views.html.index.render("StoryMode"));
   }
 
   /**
