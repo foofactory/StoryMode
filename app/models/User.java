@@ -14,7 +14,10 @@ public class User {
     public User(String userName) {
         this.userName = userName;
     }
-    public void sendChatMessage(String message) {
+    public void leaveRoom() {
+        this.currentRoom.removeUser(this);
+    }
+     public void sendChatMessage(String message) {
         chatMessage = message;
 //TODO Send this message to the other users in a room
     }

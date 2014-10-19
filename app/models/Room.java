@@ -35,6 +35,15 @@ public class Room {
         mappingOfUsernamesToUsers.put(user.getUserName(), user);
         user.setCurrentRoom(this);
     }
+    public void removeUser(User user) {
+        mappingOfUsernamesToUsers.remove(user.getUserName());
+        for (int x = 0; x < usersOrderedByTurnOrder.size(); x++) {
+            if (usersOrderedByTurnOrder.get(x).equals(user)) {
+                usersOrderedByTurnOrder.remove(x);
+                return;
+            }
+        }
+    }
     public void increaseWinnersScore(String username) {
         User winner = getUser(username);
         winner.addPointToScore();
